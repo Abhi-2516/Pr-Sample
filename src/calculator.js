@@ -5,9 +5,7 @@ function calculateTotal(price, quantity) {
   return total;
 }
 
-function applyDiscount(total, discount) {
-  return total - discount;
-}
+
 
 function processPayment(user, amount) {
   // Security issue: sensitive information
