@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Desk | Pull Request Review</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Review Desk home">
+      <span class="brand-mark">R</span>
+      <span>Review Desk</span>
+    </a>
+    <div class="topbar-actions">
+      <button class="icon-button" type="button" aria-label="Search">⌕</button>
+      <button class="profile-button" type="button" aria-label="Open profile menu">JD</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="Pull request navigation">
+      <div class="workspace-switcher">
+        <span class="repo-icon">◆</span>
+        <div>
+          <strong>northstar / web</strong>
+          <span>Engineering</span>
+        </div>
+        <span class="chevron">⌄</span>
+      </div>
+
+      <nav class="nav-list">
+        <a href="#" class="nav-item"><span>◷</span> Inbox <b>8</b></a>
+        <a href="#" class="nav-item active"><span>⌘</span> Pull requests <b>3</b></a>
+        <a href="#" class="nav-item"><span>▤</span> My reviews</a>
+        <a href="#" class="nav-item"><span>✓</span> Completed</a>
+      </nav>
+
+      <div class="sidebar-section">
+        <p class="eyebrow">Repositories</p>
+        <a href="#" class="repo-link"><span class="status-dot green"></span> web-platform <small>12</small></a>
+        <a href="#" class="repo-link"><span class="status-dot amber"></span> design-system <small>4</small></a>
+        <a href="#" class="repo-link"><span class="status-dot blue"></span> mobile-app <small>7</small></a>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="status-card">
+          <span class="status-dot green"></span>
+          <div><strong>All systems normal</strong><small>Last synced just now</small></div>
+        </div>
+        <a href="#" class="nav-item"><span>⚙</span> Preferences</a>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="content-header">
+        <div>
+          <p class="breadcrumb">Pull requests <span>/</span> Review queue</p>
+          <h1>Ready for your review</h1>
+          <p class="subheading">Three changes are waiting for your eyes.</p>
+        </div>
+        <button class="filter-button" type="button" id="filterButton">☷ <span>Filter</span></button>
+      </div>
+
+      <div class="review-layout">
+        <section class="queue-panel" aria-label="Pull request queue">
+          <div class="queue-summary"><strong>3 open reviews</strong><span>Sorted by priority</span></div>
+          <div class="pr-list">
+            <button class="pr-card selected" type="button" data-pr="checkout">
+              <div class="pr-card-top"><span class="priority high">High priority</span><span class="time">18m ago</span></div>
+              <h2>Improve checkout error states</h2>
+              <p>Make payment failures clearer and easier to recover from.</p>
+              <div class="pr-card-meta"><span class="avatar avatar-pink">AM</span><span>Alex Morgan</span><span class="divider"></span><span>web-platform</span></div>
+            </button>
+            <button class="pr-card" type="button" data-pr="tokens">
+              <div class="pr-card-top"><span class="priority medium">Medium priority</span><span class="time">2h ago</span></div>
+              <h2>Refresh color tokens</h2>
+              <p>Align semantic colors with the new visual system.</p>
+              <div class="pr-card-meta"><span class="avatar avatar-blue">SK</span><span>Sam Kim</span><span class="divider"></span><span>design-system</span></div>
+            </button>
+            <button class="pr-card" type="button" data-pr="analytics">
+              <div class="pr-card-top"><span class="priority low">Low priority</span><span class="time">Yesterday</span></div>
+              <h2>Track onboarding completion</h2>
+              <p>Add the missing event for the welcome checklist.</p>
+              <div class="pr-card-meta"><span class="avatar avatar-yellow">RB</span><span>Riley Brown</span><span class="divider"></span><span>web-platform</span></div>
+            </button>
+          </div>
+        </section>
+
+        <section class="detail-panel" aria-label="Pull request details">
+          <div class="pr-detail-header">
+            <div class="detail-title-row"><span class="open-dot"></span><span>Open</span><span class="detail-number">#1842</span></div>
+            <h2 id="detailTitle">Improve checkout error states</h2>
+            <p id="detailDescription">Make payment failures clearer and easier to recover from.</p>
+            <div class="detail-meta"><span class="avatar avatar-pink">AM</span><strong>Alex Morgan</strong><span>opened 18 minutes ago</span><span class="branch">feature/checkout-errors</span><span>→</span><span class="branch">main</span></div>
+          </div>
+          <div class="tabs" role="tablist">
+            <button class="tab active" type="button">Conversation <span>2</span></button>
+            <button class="tab" type="button">Commits <span>4</span></button>
+            <button class="tab" type="button">Files changed <span>3</span></button>
+          </div>
+
+          <div class="activity">
+            <div class="activity-item">
+              <span class="avatar avatar-green">JD</span>
+              <div class="activity-body">
+                <div class="activity-line"><strong>Jordan Davis</strong><span>requested your review</span><time>18m ago</time></div>
+                <div class="commit-row"><span class="commit-icon">↗</span><strong>Make checkout errors actionable</strong><code>8d31c2a</code><span class="files-count">+ 3 files</span></div>
+              </div>
+            </div>
+
+            <div class="diff-card">
+              <div class="diff-toolbar"><div><strong>src/components/PaymentError.tsx</strong><span class="file-path"> / components</span></div><div class="diff-actions"><span class="change-stat">+18 −6</span><button type="button" class="small-icon" aria-label="More file actions">•••</button></div></div>
+              <div class="code-block" aria-label="Code diff">
+                <div class="code-line context"><span class="line-number">42</span><span class="line-number">42</span><span class="code">return (</span></div>
+                <div class="code-line removed"><span class="line-number">43</span><span class="line-number"></span><span class="code">  &lt;Alert&gt;Payment failed. Try again.&lt;/Alert&gt;</span></div>
+                <div class="code-line added"><span class="line-number"></span><span class="line-number">43</span><span class="code">  &lt;PaymentError</span></div>
+                <div class="code-line added"><span class="line-number"></span><span class="line-number">44</span><span class="code">    title="We couldn't process your payment"</span></div>
+                <div class="code-line added"><span class="line-number"></span><span class="line-number">45</span><span class="code">    message="Check your card details or try another method."</span></div>
+                <div class="code-line added"><span class="line-number"></span><span class="line-number">46</span><span class="code">    action={{ label: 'Try again', onClick: retry }}</span></div>
+                <div class="code-line added"><span class="line-number"></span><span class="line-number">47</span><span class="code">  /&gt;</span></div>
+                <div class="code-line context"><span class="line-number">44</span><span class="line-number">48</span><span class="code">);</span></div>
+              </div>
+              <div class="inline-comment" id="commentThread">
+                <div class="comment-marker">2</div>
+                <div class="comment-content"><div class="comment-heading"><span class="avatar avatar-blue">SK</span><strong>Sam Kim</strong><span>12m ago</span></div><p>Could we keep the original error code available for support diagnostics?</p><div class="comment-actions"><button type="button" class="text-button" id="replyButton">Reply</button><button type="button" class="text-button">Resolve</button></div></div>
+              </div>
+              <form class="comment-form" id="commentForm"><div class="avatar avatar-green">JD</div><textarea id="commentInput" placeholder="Leave a comment..." rows="1"></textarea><button type="submit" class="send-button" aria-label="Send comment">↑</button></form>
+            </div>
+
+            <div class="activity-item compact"><span class="avatar avatar-yellow">RB</span><div class="activity-body"><div class="activity-line"><strong>Riley Brown</strong><span>approved these changes</span><time>8m ago</time></div></div></div>
+          </div>
+
+          <div class="review-footer"><span class="footer-note">Your review helps ship better code.</span><div class="review-actions"><button type="button" class="request-button" id="requestButton">Request changes</button><button type="button" class="approve-button" id="approveButton">✓ Approve</button></div></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
