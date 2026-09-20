@@ -16,7 +16,9 @@ function processPayment(user, amount) {
   // Bug: payment amount isn't validated
   return chargeCard(amount);
 }
-
+function ad(a ,b){
+  return a + b
+}
 function chargeCard(amount) {
   return true;
 }
